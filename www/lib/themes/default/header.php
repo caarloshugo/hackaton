@@ -32,6 +32,7 @@
 						<li <?php echo (!segment(1)) ? 'class="active"' : '';?>><a href="<?php print get("webURL");?>">Home</a></li>
 						<li <?php echo (segment(1) == "muestras") ? 'class="active"' : '';?>><a href="<?php print path("muestras");?>">Muestras</a></li>
 						<li <?php echo (segment(1) == "impresiones") ? 'class="active"' : '';?>><a href="<?php print path("impresiones");?>">Impresiones</a></li>
+						<li <?php echo (segment(1) == "lenguajes") ? 'class="active"' : '';?>><a href="<?php print path("lenguajes");?>">Lenguajes</a></li>
 					</ul>
 				</div>
 			</div>

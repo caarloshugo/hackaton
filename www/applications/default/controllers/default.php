@@ -43,4 +43,10 @@ class Default_Controller extends ZP_Controller {
 		
 		$this->render("content", $vars);
 	}
+	
+	public function lenguajes() {
+		$vars["view"] = $this->view("lenguajes", TRUE);
+		
+		$this->render("content", $vars);
+	}
 }

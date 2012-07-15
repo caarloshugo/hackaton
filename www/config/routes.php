@@ -21,4 +21,11 @@ $routes = array(
 			"method"	  => "works",
 			"params"	  => array()
 		),
+	2 => array(
+			"pattern"	  => "/^lenguajes/",
+			"application" => "default",
+			"controller"  => "default",
+			"method"	  => "lenguajes",
+			"params"	  => array()
+		),
 );
