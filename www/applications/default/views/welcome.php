@@ -105,23 +105,23 @@
 		<tbody>
 			<tr>
 				<td>Ni&ntilde;as</td>
-				<td><?php echo $data["agenero"]["f"];?></td>
-				<td><?php echo $data["nagenero"]["f"];?></td>
-				<td><?php echo $data["agenero"]["f"] + $data["nagenero"]["f"];?></td>
+				<td><?php echo number_format($data["agenero"]["f"]);?></td>
+				<td><?php echo number_format($data["nagenero"]["f"]);?></td>
+				<td><?php echo number_format($data["agenero"]["f"] + $data["nagenero"]["f"]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Ni&ntilde;os</td>
-				<td><?php echo $data["agenero"]["m"];?></td>
-				<td><?php echo $data["nagenero"]["m"];?></td>
-				<td><?php echo $data["agenero"]["m"] + $data["nagenero"]["m"];?></td>
+				<td><?php echo number_format($data["agenero"]["m"]);?></td>
+				<td><?php echo number_format($data["nagenero"]["m"]);?></td>
+				<td><?php echo number_format($data["agenero"]["m"] + $data["nagenero"]["m"]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Totales</td>
-				<td><?php echo $data["asis"];?></td>
-				<td><?php echo $data["nasis"];?></td>
-				<td><?php echo $data["asis"] + $data["nasis"];?></td>
+				<td><?php echo number_format($data["asis"]);?></td>
+				<td><?php echo number_format($data["nasis"]);?></td>
+				<td><?php echo number_format($data["asis"] + $data["nasis"]);?></td>
 			</tr>
 		</tbody>
 	</table>
@@ -162,16 +162,16 @@
 		<tbody>
 			<tr>
 				<td>Si trabajan</td>
-				<td><?php echo $data["work"]["f"]["y"];?></td>
-				<td><?php echo $data["work"]["m"]["y"];?></td>
-				<td><?php echo $data["work"]["f"]["y"] + $data["work"]["m"]["y"];?></td>
+				<td><?php echo number_format($data["work"]["f"]["y"]);?></td>
+				<td><?php echo number_format($data["work"]["m"]["y"]);?></td>
+				<td><?php echo number_format($data["work"]["f"]["y"] + $data["work"]["m"]["y"]);?></td>
 			</tr>
 			
 			<tr>
 				<td>No trabajan</td>
-				<td><?php echo $data["work"]["f"]["n"];?></td>
-				<td><?php echo $data["work"]["m"]["n"];?></td>
-				<td><?php echo $data["work"]["m"]["n"] + $data["work"]["f"]["n"];?></td>
+				<td><?php echo number_format($data["work"]["f"]["n"]);?></td>
+				<td><?php echo number_format($data["work"]["m"]["n"]);?></td>
+				<td><?php echo number_format($data["work"]["m"]["n"] + $data["work"]["f"]["n"]);?></td>
 			</tr>
 		</tbody>
 	</table><br /><br />
@@ -189,16 +189,16 @@
 		<tbody>
 			<tr>
 				<td>Si trabajan</td>
-				<td><?php echo $data["noWork"]["f"]["y"];?></td>
-				<td><?php echo $data["noWork"]["m"]["y"];?></td>
-				<td><?php echo $data["noWork"]["f"]["y"] + $data["noWork"]["m"]["y"];?></td>
+				<td><?php echo number_format($data["noWork"]["f"]["y"]);?></td>
+				<td><?php echo number_format($data["noWork"]["m"]["y"]);?></td>
+				<td><?php echo number_format($data["noWork"]["f"]["y"] + $data["noWork"]["m"]["y"]);?></td>
 			</tr>
 			
 			<tr>
 				<td>No trabajan</td>
-				<td><?php echo $data["noWork"]["f"]["n"];?></td>
-				<td><?php echo $data["noWork"]["m"]["n"];?></td>
-				<td><?php echo $data["noWork"]["m"]["n"] + $data["noWork"]["f"]["n"];?></td>
+				<td><?php echo number_format($data["noWork"]["f"]["n"]);?></td>
+				<td><?php echo number_format($data["noWork"]["m"]["n"]);?></td>
+				<td><?php echo number_format($data["noWork"]["m"]["n"] + $data["noWork"]["f"]["n"]);?></td>
 			</tr>
 		</tbody>
 	</table><br />
@@ -243,44 +243,44 @@
 		<tbody>
 			<tr>
 				<td>Inseguridad, discriminaci&oacute;n y/o distancia de la escuela</td>
-				<td><?php echo $data["reasons"]["f"][2];?></td>
-				<td><?php echo $data["reasons"]["m"][2];?></td>
-				<td><?php echo $data["reasons"]["totales"][2];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][2]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][2]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][2]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Falta de inter&eacute;s o aptitud para la escuela</td>
-				<td><?php echo $data["reasons"]["f"][3];?></td>
-				<td><?php echo $data["reasons"]["m"][3];?></td>
-				<td><?php echo $data["reasons"]["totales"][3];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][3]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][3]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][3]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Falta de recursos econ&oacute;micos</td>
-				<td><?php echo $data["reasons"]["f"][4];?></td>
-				<td><?php echo $data["reasons"]["m"][4];?></td>
-				<td><?php echo $data["reasons"]["totales"][4];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][4]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][4]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][4]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Motivos familiares</td>
-				<td><?php echo $data["reasons"]["f"][5];?></td>
-				<td><?php echo $data["reasons"]["m"][5];?></td>
-				<td><?php echo $data["reasons"]["totales"][5];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][5]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][5]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][5]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Enfermedad, accidente o discapacidad</td>
-				<td><?php echo $data["reasons"]["f"][6];?></td>
-				<td><?php echo $data["reasons"]["m"][6];?></td>
-				<td><?php echo $data["reasons"]["totales"][6];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][6]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][6]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][6]);?></td>
 			</tr>
 			
 			<tr>
 				<td>Otra raz&oacute;n</td>
-				<td><?php echo $data["reasons"]["f"][7];?></td>
-				<td><?php echo $data["reasons"]["m"][7];?></td>
-				<td><?php echo $data["reasons"]["totales"][7];?></td>
+				<td><?php echo number_format($data["reasons"]["f"][7]);?></td>
+				<td><?php echo number_format($data["reasons"]["m"][7]);?></td>
+				<td><?php echo number_format($data["reasons"]["totales"][7]);?></td>
 			</tr>
 		</tbody>
 	</table>
@@ -358,9 +358,9 @@
 				<?php foreach($data["ent"] as $ent) { ?>
 					<tr>
 						<td><?php echo $ent["ent_str"];?></td>
-						<td><?php echo (int) $ent["asis"];?></td>
-						<td><?php echo (int) $ent["nasis"];?></td>
-						<td><?php echo (int) $ent["nasis"] + (int) $ent["asis"];?></td>
+						<td><?php echo number_format((int) $ent["asis"]);?></td>
+						<td><?php echo number_format((int) $ent["nasis"]);?></td>
+						<td><?php echo number_format((int) $ent["nasis"] + (int) $ent["asis"]);?></td>
 					</tr>
 				<?php } ?>
 			</tbody>
