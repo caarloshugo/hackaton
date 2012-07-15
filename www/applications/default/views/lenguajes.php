@@ -1,6 +1,6 @@
 <div class="page-header">
 	<h3>Lenguajes que se hablan por estado - Pronim DGEI</h3>
-	<p>Mapa de burbujas por estado y lengua que se hablan a nivel infantil</p>
+	<p>Mapa de burbujas por estado y lengua que se hablan a nivel infantil, es otro apartado diferente a la desercion escolar</p>
 </div>
 
 <iframe width="950" height="600" scrolling="no" frameborder="no" src="https://www.google.com/fusiontables/embedviz?viz=GVIZ&amp;t=GRAPH&amp;containerId=gviz_canvas&amp;sdb=1&amp;state=%7B%22ps%22%3A%221_1a_-n_-m_7_17_15_8_g_-1g_1h_3_-10_u_1z_-9_4_m_n_3_i_2_f_3_b_6_7_-b_c_1o_-x_14_-f_o_17_w_-g_k_-d_18_0_1c_-i_5_w_-z_1o_24_1r_z_24_r_13_18_f_o_1f_-2_y_7_1m_2_19_-1j_l_-2_v_r_10_4_9_19_-15_1n_1n_a_s_2u_u_x_c_1b_h_2g_o_q_21_17_10_2v_1p_i_33_1_15_-1d_6_g_-d_-1p_j_12_q_e_-v_-1n_1e_-14_-1d_16_27_8_d_-j_-1y_18_-f_1_m_-16_i_a_-l_-1j_11_2z_1e_1_z_-1r_p_h_-p_w_2v_-6_12_35_x_1p_2p_2f_1b_-1n_-k_1c_-1l_-z_1d_-1l_-b_t_1m_21_1f_-1n_-s_b_m_-2f_1l_8_-22_1i_-q_-1u_n_1d_24_1k_0_-21_1g_-1h_-17_1m_v_22_19_15_24_1j_-8_-21_v_2v_-o_%22%2C%22cx%22%3A40.526300866725016%2C%22cy%22%3A3.9545027185909656%2C%22sw%22%3A1195.1827640134961%2C%22sh%22%3A284.87167484508086%2C%22z%22%3A2.224773071704261%7D&amp;gc=false&amp;gd=false&amp;q=select+col0%2C+col1+from+160izF3tX1pMhu9sylHIks--NKQK70tU7BWU7EYM&amp;qrs=+where+col0+%3E%3D+&amp;qre=+and+col0+%3C%3D+&amp;qe=&amp;width=1060&amp;height=600"></iframe>
