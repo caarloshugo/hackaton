@@ -33,8 +33,9 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function works() {
-		$vars["data"] = $this->Default_Model->getReasonsWork();
-		$vars["view"] = $this->view("works", TRUE);
+		$vars["data"]  = $this->Default_Model->getReasonsWork();
+		$vars["incom"] = $this->Default_Model->getIncome();
+		$vars["view"]  = $this->view("works", TRUE);
 		
 		$this->render("content", $vars);
 	}
