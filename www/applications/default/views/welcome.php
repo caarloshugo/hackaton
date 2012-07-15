@@ -226,7 +226,28 @@
 		};
     </script>
 
-    <div id="chart_div2" style="width: 750px; height: 500px;"></div>
-
+    <div id="chart_div2" style="width: 750px; height: 500px;"></div><br /><br />
+	
+	<p>Tabla por estado</p>
+	<table class="table table-striped">	
+		<thead>
+			<tr>
+				<th>Estado</th>
+				<th>Asisten</th>
+				<th>No asisten</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach($data["ent"] as $ent) { ?>
+				<tr>
+					<td><?php echo $ent["ent_str"];?></td>
+					<td><?php echo (int) $ent["asis"];?></td>
+					<td><?php echo (int) $ent["nasis"];?></td>
+					<td><?php echo (int) $ent["nasis"] + (int) $ent["asis"];?></td>
+				</tr>
+			<?php } ?>
+		</tbody>
+	</table>
 	<?php } ?>
 <?php } ?>
