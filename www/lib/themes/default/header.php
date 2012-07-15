@@ -7,6 +7,12 @@
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<link href="<?php print path("vendors/css/frameworks/bootstrap/bootstrap.min.css", "zan"); ?>" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">
+		<link href="<?php print $this->themePath; ?>/css/bootstrap.css" rel="stylesheet">
+		
+		<script src="<?php print $this->themePath; ?>/js/bootstrap.min.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/bootstrap-transition.js"></script>
+		<script src="<?php print $this->themePath; ?>/js/bootstrap-tooltip.js"></script>
+		
 		<?php print $this->getCSS(); ?>
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->

@@ -23,6 +23,8 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getData() {
+		$data["work"] = $this->getWork();
+		
 		if(POST("ent") == 0) {
 			if(POST("eda") == 0) {
 				$query = $this->select . "asis=";
@@ -60,6 +62,40 @@ class Default_Model extends ZP_Model {
 		$data["nasis"]         = (int) $nasis[0]["data"];
 		
 		return $data;
+	}
+	
+	public function getWork() {
+		if(POST("ent") == 0) {
+			if(POST("eda") == 0) {
+				$query = $this->select . "asis=2 and c_ocu=";
+			} else {
+				$query = $this->select . "eda=" . POST("eda") . " and asis=2 and c_ocu=";
+			}
+		} else {
+			if(POST("eda") == 0) {
+				$query = $this->select . "ent=" . POST("ent") . " and asis=2 and c_ocu=";
+			} else {
+				$query = $this->select . "ent=" . POST("ent") . " and eda=" . POST("eda") . " and asis=2 and c_ocu=";
+			}
+		}
+		
+		$sexm = " and sex=1";
+		
+		$workmy = $this->Db->query($query . "1" . $sexm);
+		$workmn = $this->Db->query($query . "2" . $sexm);
+		
+		$sexm = " and sex=2";
+		
+		$workfy = $this->Db->query($query . "1" . $sexm);
+		$workfn = $this->Db->query($query . "2" . $sexm);
+		
+		$work["f"]["y"] = (int) $workfy[0]["data"];
+		$work["f"]["n"] = (int) $workfn[0]["data"];
+		
+		$work["m"]["y"] = (int) $workmy[0]["data"];
+		$work["m"]["n"] = (int) $workmn[0]["data"];
+		
+		return $work;
 	}
 	
 	public function getReasons() {

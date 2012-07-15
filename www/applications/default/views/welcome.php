@@ -5,39 +5,39 @@
 			<label class="control-label" for="select01">Estado: </label>
 				<div class="controls">
 					<select id="ent" name="ent">
-						<option value="0">Nacional</option>
-						<option value="1">Aguascalientes</option>
-						<option value="2">Baja California</option>
-						<option value="3">Baja California Sur</option>
-						<option value="4">Campeche</option>
-						<option value="5">Coahuila</option>
-						<option value="6">Colima</option>
-						<option value="7">Chiapas</option>
-						<option value="8">Chihuahua</option>
-						<option value="9">Distrito Federal</option>
-						<option value="10">Durango</option>
-						<option value="11">Guanajuato</option>
-						<option value="12">Guerrero</option>
-						<option value="13">Hidalgo</option>
-						<option value="14">Jalisco</option>
-						<option value="15">Edo. De M&eacute;xico</option>
-						<option value="16">Michoac&aacute;n</option>
-						<option value="17">Morelos</option>
-						<option value="18">Nayarit</option>
-						<option value="19">Nuevo Le&oacute;n</option>
-						<option value="20">Oaxaca</option>
-						<option value="21">Puebla</option>
-						<option value="22">Quer&eacute;taro</option>
-						<option value="23">Quintana Roo</option>
-						<option value="24">San Luis Potos&iacute</option>
-						<option value="25">Sinaloa</option>
-						<option value="26">Sonora</option>
-						<option value="27">Tabasco</option>
-						<option value="28">Tamaulipas</option>
-						<option value="29">Tlaxcala</option>
-						<option value="30">Veracruz</option>
-						<option value="31">Yucat&aacute;n</option>
-						<option value="32">Zacatecas</option>
+						<option value="0" <?php echo (POST("ent")==0) ? 'selected="selected"': '';?>>Nacional</option>
+						<option value="1" <?php echo (POST("ent")==1) ? 'selected="selected"': '';?>>Aguascalientes</option>
+						<option value="2" <?php echo (POST("ent")==2) ? 'selected="selected"': '';?>>Baja California</option>
+						<option value="3" <?php echo (POST("ent")==3) ? 'selected="selected"': '';?>>Baja California Sur</option>
+						<option value="4" <?php echo (POST("ent")==4) ? 'selected="selected"': '';?>>Campeche</option>
+						<option value="5" <?php echo (POST("ent")==5) ? 'selected="selected"': '';?>>Coahuila</option>
+						<option value="6" <?php echo (POST("ent")==6) ? 'selected="selected"': '';?>>Colima</option>
+						<option value="7" <?php echo (POST("ent")==7) ? 'selected="selected"': '';?>>Chiapas</option>
+						<option value="8" <?php echo (POST("ent")==8) ? 'selected="selected"': '';?>>Chihuahua</option>
+						<option value="9" <?php echo (POST("ent")==9) ? 'selected="selected"': '';?>>Distrito Federal</option>
+						<option value="10" <?php echo (POST("ent")==10) ? 'selected="selected"': '';?>>Durango</option>
+						<option value="11" <?php echo (POST("ent")==11) ? 'selected="selected"': '';?>>Guanajuato</option>
+						<option value="12" <?php echo (POST("ent")==12) ? 'selected="selected"': '';?>>Guerrero</option>
+						<option value="13" <?php echo (POST("ent")==13) ? 'selected="selected"': '';?>>Hidalgo</option>
+						<option value="14" <?php echo (POST("ent")==14) ? 'selected="selected"': '';?>>Jalisco</option>
+						<option value="15" <?php echo (POST("ent")==15) ? 'selected="selected"': '';?>>Edo. De M&eacute;xico</option>
+						<option value="16" <?php echo (POST("ent")==16) ? 'selected="selected"': '';?>>Michoac&aacute;n</option>
+						<option value="17" <?php echo (POST("ent")==17) ? 'selected="selected"': '';?>>Morelos</option>
+						<option value="18" <?php echo (POST("ent")==18) ? 'selected="selected"': '';?>>Nayarit</option>
+						<option value="19" <?php echo (POST("ent")==19) ? 'selected="selected"': '';?>>Nuevo Le&oacute;n</option>
+						<option value="20" <?php echo (POST("ent")==20) ? 'selected="selected"': '';?>>Oaxaca</option>
+						<option value="21" <?php echo (POST("ent")==21) ? 'selected="selected"': '';?>>Puebla</option>
+						<option value="22" <?php echo (POST("ent")==22) ? 'selected="selected"': '';?>>Quer&eacute;taro</option>
+						<option value="23" <?php echo (POST("ent")==23) ? 'selected="selected"': '';?>>Quintana Roo</option>
+						<option value="24" <?php echo (POST("ent")==24) ? 'selected="selected"': '';?>>San Luis Potos&iacute</option>
+						<option value="25" <?php echo (POST("ent")==25) ? 'selected="selected"': '';?>>Sinaloa</option>
+						<option value="26" <?php echo (POST("ent")==26) ? 'selected="selected"': '';?>>Sonora</option>
+						<option value="27" <?php echo (POST("ent")==27) ? 'selected="selected"': '';?>>Tabasco</option>
+						<option value="28" <?php echo (POST("ent")==28) ? 'selected="selected"': '';?>>Tamaulipas</option>
+						<option value="29" <?php echo (POST("ent")==29) ? 'selected="selected"': '';?>>Tlaxcala</option>
+						<option value="30" <?php echo (POST("ent")==20) ? 'selected="selected"': '';?>>Veracruz</option>
+						<option value="31" <?php echo (POST("ent")==31) ? 'selected="selected"': '';?>>Yucat&aacute;n</option>
+						<option value="32" <?php echo (POST("ent")==32) ? 'selected="selected"': '';?>>Zacatecas</option>
 					</select>
 				</div>
 			</div>
@@ -48,49 +48,92 @@
 			<label class="control-label" for="select01">Edad: </label>
 				<div class="controls">
 					<select id="eda" name="eda">
-						<option value="0">Todas las edades</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-						<option value="13">13</option>
-						<option value="14">14</option>
-						<option value="15">15</option>
-						<option value="16">16</option>
-						<option value="17">17</option>
+						<option value="0" <?php echo (POST("eda")==0) ? 'selected="selected"': '';?>>Todas las edades</option>
+						<option value="5" <?php echo (POST("eda")==5) ? 'selected="selected"': '';?>>5</option>
+						<option value="6" <?php echo (POST("eda")==6) ? 'selected="selected"': '';?>>6</option>
+						<option value="7" <?php echo (POST("eda")==7) ? 'selected="selected"': '';?>>7</option>
+						<option value="8" <?php echo (POST("eda")==8) ? 'selected="selected"': '';?>>8</option>
+						<option value="9" <?php echo (POST("eda")==9) ? 'selected="selected"': '';?>>9</option>
+						<option value="10" <?php echo (POST("eda")==10) ? 'selected="selected"': '';?>>10</option>
+						<option value="11" <?php echo (POST("eda")==11) ? 'selected="selected"': '';?>>11</option>
+						<option value="12" <?php echo (POST("eda")==12) ? 'selected="selected"': '';?>>12</option>
+						<option value="13" <?php echo (POST("eda")==13) ? 'selected="selected"': '';?>>13</option>
+						<option value="14" <?php echo (POST("eda")==14) ? 'selected="selected"': '';?>>14</option>
+						<option value="15" <?php echo (POST("eda")==15) ? 'selected="selected"': '';?>>15</option>
+						<option value="16" <?php echo (POST("eda")==16) ? 'selected="selected"': '';?>>16</option>
+						<option value="17" <?php echo (POST("eda")==17) ? 'selected="selected"': '';?>>17</option>
 					</select>
+					<button class="btn btn-primary" type="submit" name="submit" value="submit">Consultar</button>
 				</div>
 			</div>
 		</p>
-		
-		<div class="form-actions">
-			<button class="btn btn-primary" type="submit" name="submit" value="submit">Consultar</button>
-		</div>
-		
 	</fieldset>
  </form> 
+ 
+ <hr>
 
 <?php if(isset($data)) { ?>
-	<p>
-		Asisten: <?php echo $data["asis"];?><br />
-		No asisten: <?php echo $data["nasis"];?>
-	</p>
+	<table class="table table-striped">	
+		<thead>
+			<tr>
+				<th>Genero/Total</th>
+				<th>Asisten</th>
+				<th>No asisten</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Ni&ntilde;as</td>
+				<td><?php echo $data["agenero"]["f"];?></td>
+				<td><?php echo $data["nagenero"]["f"];?></td>
+				<td><?php echo $data["agenero"]["f"] + $data["agenero"]["f"];?></td>
+			</tr>
+			
+			<tr>
+				<td>Ni&ntilde;os</td>
+				<td><?php echo $data["agenero"]["m"];?></td>
+				<td><?php echo $data["nagenero"]["m"];?></td>
+				<td><?php echo $data["agenero"]["m"] + $data["nagenero"]["m"];?></td>
+			</tr>
+			
+			<tr>
+				<td>Totales</td>
+				<td><?php echo $data["asis"];?></td>
+				<td><?php echo $data["nasis"];?></td>
+				<td><?php echo $data["asis"] + $data["nasis"];?></td>
+			</tr>
+		</tbody>
+	</table><br /><br />
 	
 	
-	<p>
-		Ni&ntilde;as que asisten: <?php echo $data["agenero"]["f"];?><br />
-		Ni&ntilde;os que asisten: <?php echo $data["agenero"]["m"];?>
-	</p>
+	<p>Condici&oacute;n de ocupaci&oacute;n (trabajo) que NO asisten</p>
+	<table class="table table-striped">	
+		<thead>
+			<tr>
+				<th>Ocupaci&oacute;n</th>
+				<th>Ni&ntilde;as</th>
+				<th>Ni&ntilde;os</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Si trabajan</td>
+				<td><?php echo $data["work"]["f"]["y"];?></td>
+				<td><?php echo $data["work"]["m"]["y"];?></td>
+				<td><?php echo $data["work"]["f"]["y"] + $data["work"]["m"]["y"];?></td>
+			</tr>
+			
+			<tr>
+				<td>No trabajan</td>
+				<td><?php echo $data["work"]["f"]["n"];?></td>
+				<td><?php echo $data["work"]["m"]["n"];?></td>
+				<td><?php echo $data["work"]["m"]["n"] + $data["work"]["f"]["n"];?></td>
+			</tr>
+		</tbody>
+	</table><br />
 	
-	<p>
-		Ni&ntilde;as que no asisten: <?php echo $data["nagenero"]["f"];?><br />
-		Ni&ntilde;os que no asisten: <?php echo $data["nagenero"]["m"];?>
-	</p>
-
 	<div id="chart_div" style=" width:750px; height: 500px;"></div>
     
     <script type="text/javascript">
