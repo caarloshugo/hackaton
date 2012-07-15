@@ -8,11 +8,12 @@
 		<link href="<?php print path("vendors/css/frameworks/bootstrap/bootstrap.min.css", "zan"); ?>" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/bootstrap.css" rel="stylesheet">
-		
+		<script src="<?php print $this->themePath; ?>/js/jquery.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/bootstrap.min.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/bootstrap-transition.js"></script>
 		<script src="<?php print $this->themePath; ?>/js/bootstrap-tooltip.js"></script>
 		
+		<script src="<?php print $this->themePath; ?>/js/functions.js"></script>
 		<?php print $this->getCSS(); ?>
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -26,10 +27,10 @@
 		<div class="topbar">
 			<div class="fill">
 				<div class="container">
-					<a class="brand" href="#">Hackat&oacute;n por los derechos de la infancia</a>
+					<a class="brand" href="<?php print get("webURL");?>">Hackat&oacute;n por los derechos de la infancia</a>
 					
 					<ul class="nav">
-						<li class="active"><a href="#">Home</a></li>
+						<li class="active"><a href="<?php print get("webURL");?>">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>

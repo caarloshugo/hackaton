@@ -46,3 +46,7 @@ body {
 .topbar .btn {
 	border: 0;
 }
+
+.ocultar-estado { cursor:pointer; }
+.estado { display:none; }
+.ocultar-estado:hover { cursor:pointer; color:#2194ED; }

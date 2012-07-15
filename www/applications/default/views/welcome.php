@@ -1,3 +1,8 @@
+<div class="page-header">
+	<h3>&iquest;Com&oacute; funciona?</h3>
+	<p>Seleccione uno de los valores de cada lista para mostrar la informaci&oacute;n y graficas correspondientes a ese estado y edad o si lo desea a nivel nacional y por todas las edades</p>
+</div>
+
 <form class="form-horizontal" action="" method="post">
 	<fieldset>
 		<p>
@@ -68,11 +73,14 @@
 			</div>
 		</p>
 	</fieldset>
- </form> 
- 
- <hr>
+</form> 
+
+
+<hr>
 
 <?php if(isset($data)) { ?>
+	<h4>Totales de asistencia escolar</h4>
+	
 	<table class="table table-striped">	
 		<thead>
 			<tr>
@@ -87,7 +95,7 @@
 				<td>Ni&ntilde;as</td>
 				<td><?php echo $data["agenero"]["f"];?></td>
 				<td><?php echo $data["nagenero"]["f"];?></td>
-				<td><?php echo $data["agenero"]["f"] + $data["agenero"]["f"];?></td>
+				<td><?php echo $data["agenero"]["f"] + $data["nagenero"]["f"];?></td>
 			</tr>
 			
 			<tr>
@@ -107,7 +115,7 @@
 	</table><br /><br />
 	
 	
-	<p>Condici&oacute;n de ocupaci&oacute;n (trabajo) que NO asisten</p>
+	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que NO asisten</h4>
 	<table class="table table-striped">	
 		<thead>
 			<tr>
@@ -130,6 +138,33 @@
 				<td><?php echo $data["work"]["f"]["n"];?></td>
 				<td><?php echo $data["work"]["m"]["n"];?></td>
 				<td><?php echo $data["work"]["m"]["n"] + $data["work"]["f"]["n"];?></td>
+			</tr>
+		</tbody>
+	</table><br /><br />
+	
+	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que SI asisten</h4>
+	<table class="table table-striped">	
+		<thead>
+			<tr>
+				<th>Ocupaci&oacute;n</th>
+				<th>Ni&ntilde;as</th>
+				<th>Ni&ntilde;os</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Si trabajan</td>
+				<td><?php echo $data["noWork"]["f"]["y"];?></td>
+				<td><?php echo $data["noWork"]["m"]["y"];?></td>
+				<td><?php echo $data["noWork"]["f"]["y"] + $data["noWork"]["m"]["y"];?></td>
+			</tr>
+			
+			<tr>
+				<td>No trabajan</td>
+				<td><?php echo $data["noWork"]["f"]["n"];?></td>
+				<td><?php echo $data["noWork"]["m"]["n"];?></td>
+				<td><?php echo $data["noWork"]["m"]["n"] + $data["noWork"]["f"]["n"];?></td>
 			</tr>
 		</tbody>
 	</table><br />
@@ -160,7 +195,7 @@
       }
     </script>
 
-	<br /><br /><p>Raz&oacute;n de inasistencia escolar:</p>
+	<br /><br /><h4>Raz&oacute;n de inasistencia escolar:</h4>
 	
 	<table class="table table-striped">	
 		<thead>
@@ -217,6 +252,8 @@
 	</table>
 	
 	<?php if(POST("ent") == 0) { ?>
+	<br /><br /><h4>Tabla de asitencia por estado</h4>
+	
 	 <script type="text/javascript">
 		google.load('visualization', '1', {'packages': ['geochart']});
 		google.setOnLoadCallback(drawMarkersMap);
@@ -270,27 +307,32 @@
     </script>
 
     <div id="chart_div2" style="width: 750px; height: 500px;"></div><br /><br />
+	<h4 class="ocultar-estado">Mostar/Ocultar tabla de resultados</h4>
 	
-	<p>Tabla por estado</p>
-	<table class="table table-striped">	
-		<thead>
-			<tr>
-				<th>Estado</th>
-				<th>Asisten</th>
-				<th>No asisten</th>
-				<th>Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php foreach($data["ent"] as $ent) { ?>
+	<div class="estado">
+		<h4>Tabla por estado<h4>
+		<table class="table table-striped">	
+			<thead>
 				<tr>
-					<td><?php echo $ent["ent_str"];?></td>
-					<td><?php echo (int) $ent["asis"];?></td>
-					<td><?php echo (int) $ent["nasis"];?></td>
-					<td><?php echo (int) $ent["nasis"] + (int) $ent["asis"];?></td>
+					<th>Estado</th>
+					<th>Asisten</th>
+					<th>No asisten</th>
+					<th>Total</th>
 				</tr>
-			<?php } ?>
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				<?php foreach($data["ent"] as $ent) { ?>
+					<tr>
+						<td><?php echo $ent["ent_str"];?></td>
+						<td><?php echo (int) $ent["asis"];?></td>
+						<td><?php echo (int) $ent["nasis"];?></td>
+						<td><?php echo (int) $ent["nasis"] + (int) $ent["asis"];?></td>
+					</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+	</div>
 	<?php } ?>
+<?php } else { ?>
+
 <?php } ?>
