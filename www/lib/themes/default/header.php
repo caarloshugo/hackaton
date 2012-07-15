@@ -31,7 +31,7 @@
 					
 					<ul class="nav">
 						<li class="active"><a href="<?php print get("webURL");?>">Home</a></li>
-						<li><a href="#about">About</a></li>
+						<li><a href="<?php print path("muestras");?>">Muestras</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
