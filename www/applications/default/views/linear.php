@@ -1,7 +1,9 @@
-<h1>Trabajo infantil</h1>
-<h2>Encusta nacional de ocupacion y empleo</h2>
+<link href="<?php print get("webURL");?>/www/applications/default/views/css/linear.css" rel="stylesheet">
 
-<p>Deslize sobre las barras
+<div class="page-header">
+	<h3>Trabajo infantil - Encusta nacional de ocupacion y emple</h3>
+	<p>Deslize sobre las barra y se mostraran los resultados</p>
+</div>
 
 <div id="charts">
   <div id="hour-chart" class="chart">

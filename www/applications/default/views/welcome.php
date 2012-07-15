@@ -112,10 +112,32 @@
 				<td><?php echo $data["asis"] + $data["nasis"];?></td>
 			</tr>
 		</tbody>
-	</table><br /><br />
+	</table>
 	
+	<script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Genero', 'Cantidad'],
+          ['Niños que NO asisten a la escuela', <?php echo $data["work"]["m"]["y"];?>],
+          ['Niños que SI asisten a la escuela', <?php echo $data["noWork"]["m"]["y"];?>],
+          ['Niñas que NO asisten a la escuela', <?php echo $data["work"]["f"]["y"];?>],
+          ['Niñas que SI asisten a la escuela', <?php echo $data["noWork"]["f"]["y"];?>]
+        ]);
+
+        var options = {
+          title: 'Condición de ocupación (trabajo)'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div3'));
+        chart.draw(data, options);
+      }
+    </script>
 	
-	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que NO asisten</h4>
+	<div id="chart_div3" style=" width:750px; height: 500px;"></div>
+	
+	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que NO asisten a la escuela</h4>
 	<table class="table table-striped">	
 		<thead>
 			<tr>
@@ -142,7 +164,7 @@
 		</tbody>
 	</table><br /><br />
 	
-	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que SI asisten</h4>
+	<h4>Condici&oacute;n de ocupaci&oacute;n (trabajo) que SI asisten a la escuela</h4>
 	<table class="table table-striped">	
 		<thead>
 			<tr>
