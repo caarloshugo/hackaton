@@ -20,7 +20,7 @@
 		<div class="topbar">
 			<div class="fill">
 				<div class="container">
-					<a class="brand" href="#">ZanPHP.com</a>
+					<a class="brand" href="#">Hackat&oacute;n por los derechos de la infancia</a>
 					
 					<ul class="nav">
 						<li class="active"><a href="#">Home</a></li>
@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="content">
 				<div class="page-header">
-					<h1>ZanPHP <small>PHP5 Framework</small></h1>
+					<h1>Hackatón <small>deserción escolar por estado</small></h1>
 				</div>
 				
 				<div class="row">

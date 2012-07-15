@@ -16,7 +16,12 @@ class Default_Model extends ZP_Model {
 		$this->table  = "datasets";
 		$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
 	}
-
+	
+	public function getCities() {
+		$query = "SELECT * FROM totales";
+		return $this->Db->query($query);
+	}
+	
 	public function getData() {
 		if(POST("ent") == 0) {
 			if(POST("eda") == 0) {
@@ -24,6 +29,8 @@ class Default_Model extends ZP_Model {
 			} else {
 				$query = $this->select . "eda=" . POST("eda") . " and asis=";
 			}
+			
+			$data["ent"] = $this->getCities();  
 		} else {
 			if(POST("eda") == 0) {
 				$query = $this->select . "ent=" . POST("ent") . " and asis=";
@@ -45,12 +52,12 @@ class Default_Model extends ZP_Model {
 		
 		#Razon de inasistencia escolar
 		$data["reasons"]       = $this->getReasons();
-		$data["agenero"]["m"]  = $asism[0]["data"];
-		$data["agenero"]["f"]  = $asisf[0]["data"];
-		$data["nagenero"]["m"] = $nasism[0]["data"];
-		$data["nagenero"]["f"] = $nasisf[0]["data"];
-		$data["asis"]          = $asis[0]["data"];
-		$data["nasis"]         = $nasis[0]["data"];
+		$data["agenero"]["m"]  = (int) $asism[0]["data"];
+		$data["agenero"]["f"]  = (int) $asisf[0]["data"];
+		$data["nagenero"]["m"] = (int) $nasism[0]["data"];
+		$data["nagenero"]["f"] = (int) $nasisf[0]["data"];
+		$data["asis"]          = (int) $asis[0]["data"];
+		$data["nasis"]         = (int) $nasis[0]["data"];
 		
 		return $data;
 	}
@@ -95,26 +102,26 @@ class Default_Model extends ZP_Model {
 		$nasisr["6f"] = $this->Db->query($query . "6" . $sexm);
 		$nasisr["7f"] = $this->Db->query($query . "7" . $sexm);
 		
-		$data["totales"][2] = $nasisr["2"][0]["data"];
-		$data["totales"][3] = $nasisr["3"][0]["data"];
-		$data["totales"][4] = $nasisr["4"][0]["data"];
-		$data["totales"][5] = $nasisr["5"][0]["data"];
-		$data["totales"][6] = $nasisr["6"][0]["data"];
-		$data["totales"][7] = $nasisr["7"][0]["data"];
+		$data["totales"][2] = (int) $nasisr["2"][0]["data"];
+		$data["totales"][3] = (int) $nasisr["3"][0]["data"];
+		$data["totales"][4] = (int) $nasisr["4"][0]["data"];
+		$data["totales"][5] = (int) $nasisr["5"][0]["data"];
+		$data["totales"][6] = (int) $nasisr["6"][0]["data"];
+		$data["totales"][7] = (int) $nasisr["7"][0]["data"];
 		
-		$data["m"][2] = $nasisr["2m"][0]["data"];
-		$data["m"][3] = $nasisr["3m"][0]["data"];
-		$data["m"][4] = $nasisr["4m"][0]["data"];
-		$data["m"][5] = $nasisr["5m"][0]["data"];
-		$data["m"][6] = $nasisr["6m"][0]["data"];
-		$data["m"][7] = $nasisr["7m"][0]["data"];
+		$data["m"][2] = (int) $nasisr["2m"][0]["data"];
+		$data["m"][3] = (int) $nasisr["3m"][0]["data"];
+		$data["m"][4] = (int) $nasisr["4m"][0]["data"];
+		$data["m"][5] = (int) $nasisr["5m"][0]["data"];
+		$data["m"][6] = (int) $nasisr["6m"][0]["data"];
+		$data["m"][7] = (int) $nasisr["7m"][0]["data"];
 		
-		$data["f"][2] = $nasisr["2f"][0]["data"];
-		$data["f"][3] = $nasisr["3f"][0]["data"];
-		$data["f"][4] = $nasisr["4f"][0]["data"];
-		$data["f"][5] = $nasisr["5f"][0]["data"];
-		$data["f"][6] = $nasisr["6f"][0]["data"];
-		$data["f"][7] = $nasisr["7f"][0]["data"];
+		$data["f"][2] = (int) $nasisr["2f"][0]["data"];
+		$data["f"][3] = (int) $nasisr["3f"][0]["data"];
+		$data["f"][4] = (int) $nasisr["4f"][0]["data"];
+		$data["f"][5] = (int) $nasisr["5f"][0]["data"];
+		$data["f"][6] = (int) $nasisr["6f"][0]["data"];
+		$data["f"][7] = (int) $nasisr["7f"][0]["data"];
 
 		return $data;
 	}

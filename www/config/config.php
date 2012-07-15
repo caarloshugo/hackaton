@@ -10,7 +10,7 @@ if(!defined("_access")) {
  * Website
  */
 $ZP["webURL"] 	    = "http://local.hackaton.com";
-$ZP["webName"] 	    = "ZanPHP";
+$ZP["webName"] 	    = "Hackatón por los Derechos de la Infancia";
 $ZP["webTheme"]     = "default";
 $ZP["webSituation"] = "Active";
 $ZP["webMessage"]   = "";

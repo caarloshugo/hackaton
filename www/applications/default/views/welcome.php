@@ -68,7 +68,7 @@
 		</p>
 		
 		<div class="form-actions">
-			<button class="btn btn-primary" type="submit" name="submit" value="submit">Save changes</button>
+			<button class="btn btn-primary" type="submit" name="submit" value="submit">Consultar</button>
 		</div>
 		
 	</fieldset>
@@ -99,16 +99,16 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Razón', 'Niñas', 'Niños', 'Total'],
-          ['Inseguridad, discriminación y/o distancia', <?php echo $data["reasons"]["f"][2];?>, <?php echo $data["reasons"]["m"][2];?>, <?php echo $data["reasons"]["totales"][2];?>],
-          ['Falta de interés o aptitud', <?php echo $data["reasons"]["f"][3];?>, <?php echo $data["reasons"]["m"][3];?>, <?php echo $data["reasons"]["totales"][3];?>],
-          ['Falta de recursos económicos', <?php echo $data["reasons"]["f"][4];?>, <?php echo $data["reasons"]["m"][4];?>, <?php echo $data["reasons"]["totales"][4];?>],
-          ['Motivos familiares', <?php echo $data["reasons"]["f"][5];?>, <?php echo $data["reasons"]["m"][5];?>, <?php echo $data["reasons"]["totales"][5];?>],
-          ['Enfermedad, accidente o discapacidad', <?php echo $data["reasons"]["f"][6];?>, <?php echo $data["reasons"]["m"][6];?>, <?php echo $data["reasons"]["totales"][6];?>],
-          ['Otra razón', <?php echo $data["reasons"]["f"][7];?>, <?php echo $data["reasons"]["m"][7];?>, <?php echo $data["reasons"]["totales"][7];?>]
+          ['Inseguridad, discriminación y/o distancia', <?php echo (int) $data["reasons"]["f"][2];?>, <?php echo (int) $data["reasons"]["m"][2];?>, <?php echo (int) $data["reasons"]["totales"][2];?>],
+          ['Falta de interés o aptitud', <?php echo (int) $data["reasons"]["f"][3];?>, <?php echo (int) $data["reasons"]["m"][3];?>, <?php echo (int) $data["reasons"]["totales"][3];?>],
+          ['Falta de recursos económicos', <?php echo (int) $data["reasons"]["f"][4];?>, <?php echo (int) $data["reasons"]["m"][4];?>, <?php echo(int)  $data["reasons"]["totales"][4];?>],
+          ['Motivos familiares', <?php echo (int) $data["reasons"]["f"][5];?>, <?php echo (int) $data["reasons"]["m"][5];?>, <?php echo (int) $data["reasons"]["totales"][5];?>],
+          ['Enfermedad, accidente o discapacidad', <?php echo (int) $data["reasons"]["f"][6];?>, <?php echo (int) $data["reasons"]["m"][6];?>, <?php echo (int) $data["reasons"]["totales"][6];?>],
+          ['Otra razón', <?php echo (int) $data["reasons"]["f"][7];?>, <?php echo (int) $data["reasons"]["m"][7];?>, <?php echo (int) $data["reasons"]["totales"][7];?>]
         ]);
 
         var options = {
-          title: 'Gráfica de resultados',
+          title: 'Gráfica de resultados - Razón de inasistencia escolar',
           hAxis: {title: 'Razón',  titleTextStyle: {color: 'red'}}
         };
 
@@ -117,8 +117,7 @@
       }
     </script>
 
-
-	<p>Raz&oacute;n de inasistencia escolar:</p>
+	<br /><br /><p>Raz&oacute;n de inasistencia escolar:</p>
 	
 	<table class="table table-striped">	
 		<thead>
@@ -173,4 +172,61 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<?php if(POST("ent") == 0) { ?>
+	 <script type="text/javascript">
+		google.load('visualization', '1', {'packages': ['geochart']});
+		google.setOnLoadCallback(drawMarkersMap);
+
+		  function drawMarkersMap() {
+		  var data = google.visualization.arrayToDataTable([
+			['City',   'Asisten', 'No asisten'],
+			['Aguascalientes', <?php echo $data["ent"][0]["asis"];?>,    <?php echo $data["ent"][0]["nasis"];?>],
+			['Baja California', <?php echo $data["ent"][1]["asis"];?>,    <?php echo $data["ent"][1]["nasis"];?>],
+			['Baja California Sur', <?php echo $data["ent"][2]["asis"];?>,    <?php echo $data["ent"][2]["nasis"];?>7],
+			['Campeche', <?php echo $data["ent"][3]["asis"];?>,    <?php echo $data["ent"][3]["nasis"];?>],
+			['Coahuila', <?php echo $data["ent"][4]["asis"];?>,    <?php echo $data["ent"][4]["nasis"];?>],
+			['Colima', <?php echo $data["ent"][5]["asis"];?>,    <?php echo $data["ent"][5]["nasis"];?>],
+			['Chiapas', <?php echo $data["ent"][6]["asis"];?>,    <?php echo $data["ent"][6]["nasis"];?>],
+			['Chihuahua', <?php echo $data["ent"][7]["asis"];?>,    <?php echo $data["ent"][7]["nasis"];?>7],
+			['Distrito Federal', <?php echo $data["ent"][8]["asis"];?>,    <?php echo $data["ent"][8]["nasis"];?>],
+			['Durango', <?php echo $data["ent"][9]["asis"];?>,    <?php echo $data["ent"][9]["nasis"];?>],
+			['Guanajuato', <?php echo $data["ent"][10]["asis"];?>,    <?php echo $data["ent"][10]["nasis"];?>],
+			['Guerrero', <?php echo $data["ent"][11]["asis"];?>,    <?php echo $data["ent"][11]["nasis"];?>],
+			['Hidalgo', <?php echo $data["ent"][12]["asis"];?>,    <?php echo $data["ent"][12]["nasis"];?>],
+			['Jalisco', <?php echo $data["ent"][13]["asis"];?>,    <?php echo $data["ent"][13]["nasis"];?>],
+			['Edo. De México', <?php echo $data["ent"][14]["asis"];?>,    <?php echo $data["ent"][14]["nasis"];?>],
+			['Michoacán', <?php echo $data["ent"][15]["asis"];?>,    <?php echo $data["ent"][15]["nasis"];?>],
+			['Morelos', <?php echo $data["ent"][16]["asis"];?>,    <?php echo $data["ent"][16]["nasis"];?>],
+			['Nayarit', <?php echo $data["ent"][17]["asis"];?>,    <?php echo $data["ent"][17]["nasis"];?>],
+			['Nuevo León', <?php echo $data["ent"][18]["asis"];?>,    <?php echo $data["ent"][18]["nasis"];?>],
+			['Oaxaca', <?php echo $data["ent"][19]["asis"];?>,    <?php echo $data["ent"][19]["nasis"];?>],
+			['Puebla', <?php echo $data["ent"][20]["asis"];?>,    <?php echo $data["ent"][20]["nasis"];?>],
+			['Querétaro', <?php echo $data["ent"][21]["asis"];?>,    <?php echo $data["ent"][21]["nasis"];?>],
+			['Quintana Roo', <?php echo $data["ent"][22]["asis"];?>,    <?php echo $data["ent"][22]["nasis"];?>],
+			['San Luis Potosí', <?php echo $data["ent"][23]["asis"];?>,    <?php echo $data["ent"][23]["nasis"];?>],
+			['Sinaloa', <?php echo $data["ent"][24]["asis"];?>,    <?php echo $data["ent"][24]["nasis"];?>],
+			['Sonora', <?php echo $data["ent"][25]["asis"];?>,    <?php echo $data["ent"][25]["nasis"];?>],
+			['Tabasco', <?php echo $data["ent"][26]["asis"];?>,    <?php echo $data["ent"][26]["nasis"];?>],
+			['Tamaulipas', <?php echo $data["ent"][27]["asis"];?>,    <?php echo $data["ent"][27]["nasis"];?>],
+			['Tlaxcala', <?php echo $data["ent"][28]["asis"];?>,    <?php echo $data["ent"][28]["nasis"];?>],
+			['Veracruz', <?php echo $data["ent"][29]["asis"];?>,    <?php echo $data["ent"][29]["nasis"];?>],
+			['Yucatán',  <?php echo $data["ent"][30]["asis"];?>,    <?php echo $data["ent"][30]["nasis"];?>],
+			['Zacatecas', <?php echo $data["ent"][31]["asis"];?>,    <?php echo $data["ent"][31]["nasis"];?>]
+		  ]);
+						
+		  var options = {
+			region: 'MX',
+			displayMode: 'markers',
+			colorAxis: {colors: ['green', 'blue']}
+		  };
+
+		  var chart = new google.visualization.GeoChart(document.getElementById('chart_div2'));
+		  chart.draw(data, options);
+		};
+    </script>
+
+    <div id="chart_div2" style="width: 750px; height: 500px;"></div>
+
+	<?php } ?>
 <?php } ?>
