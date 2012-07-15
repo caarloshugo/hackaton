@@ -13,12 +13,15 @@ class Default_Controller extends ZP_Controller {
 
 		$this->Templates->theme();
 
-		#$this->Default_Model = $this->model("Default_Model");
+		$this->Default_Model = $this->model("Default_Model");
 	}
 	
-	public function index() {	
-		$vars["message"] = __(_("Hello World"));
-		$vars["view"]	 = $this->view("show", TRUE);
+	public function index() {
+		if(POST("submit")) {
+			$vars["data"] = $this->Default_Model->getData();
+		}
+		
+		$vars["view"] = $this->view("welcome", TRUE);
 		
 		$this->render("content", $vars);
 	}

@@ -12,10 +12,10 @@ if(!defined("_access")) {
  */
 $ZP["db"]["dbPDO"] 	  = FALSE;
 $ZP["db"]["dbDriver"] = "mysqli";
-$ZP["db"]["dbHost"]   = "localhost";
+$ZP["db"]["dbHost"]   = "127.0.0.1";
 $ZP["db"]["dbUser"]   = "root";
-$ZP["db"]["dbPwd"] 	  = "";
-$ZP["db"]["dbName"]   = "taller";
+$ZP["db"]["dbPwd"] 	  = "root";
+$ZP["db"]["dbName"]   = "hackaton";
 $ZP["db"]["dbPort"]   = 3306;
 $ZP["db"]["dbPfx"] 	  = "zan_";
 $ZP["db"]["dbSocket"] = NULL;

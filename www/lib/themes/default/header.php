@@ -4,6 +4,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<title><?php print $this->getTitle(); ?></title>
 		
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 		<link href="<?php print path("vendors/css/frameworks/bootstrap/bootstrap.min.css", "zan"); ?>" rel="stylesheet">
 		<link href="<?php print $this->themePath; ?>/css/style.css" rel="stylesheet">
 		<?php print $this->getCSS(); ?>
@@ -26,12 +27,6 @@
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
-          
-					<form action="#" class="pull-right">
-						<input class="input-small" type="text" placeholder="Username">
-						<input class="input-small" type="password" placeholder="Password">
-						<button class="btn" type="submit">Sign in</button>
-					</form>
 				</div>
 			</div>
 		</div>
