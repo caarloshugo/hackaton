@@ -20,8 +20,8 @@ $ZP["benchMark"]    = FALSE;
  * Server
  */
 $ZP["production"] = FALSE;
-$ZP["domain"] 	  = FALSE;
-$ZP["modRewrite"] = FALSE;
+$ZP["domain"] 	  = TRUE;
+$ZP["modRewrite"] = TRUE;
 $ZP["autoRender"] = TRUE;
 
 /**

@@ -13,7 +13,7 @@ class Default_Model extends ZP_Model {
 		
 		$this->helpers();
 	
-		$this->table  = "datasets";
+		$this->table  = "datasets2007";
 		$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
 	}
 	
@@ -23,6 +23,14 @@ class Default_Model extends ZP_Model {
 	}
 	
 	public function getData() {
+		if(POST("year") == 1) {
+			$this->table = "datasets2007";
+			$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
+		} else {
+			$this->table = "datasets2009";
+			$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
+		}
+		
 		$data["work"]   = $this->getWork();
 		$data["noWork"] = $this->getNoWork();
 		

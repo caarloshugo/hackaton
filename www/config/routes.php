@@ -15,10 +15,10 @@ $routes = array(
 			"params"	  => array()
 		),
 	1 => array(
-			"pattern"	  => "/^test/",
+			"pattern"	  => "/^impresiones/",
 			"application" => "default",
 			"controller"  => "default",
-			"method"	  => "test",
+			"method"	  => "works",
 			"params"	  => array()
 		),
 );

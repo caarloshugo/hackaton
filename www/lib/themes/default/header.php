@@ -28,11 +28,10 @@
 			<div class="fill">
 				<div class="container">
 					<a class="brand" href="<?php print get("webURL");?>">Hackat&oacute;n por los derechos de la infancia</a>
-					
 					<ul class="nav">
-						<li class="active"><a href="<?php print get("webURL");?>">Home</a></li>
-						<li><a href="<?php print path("muestras");?>">Muestras</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li <?php echo (!segment(0)) ? 'class="active"' : '';?>><a href="<?php print get("webURL");?>">Home</a></li>
+						<li <?php echo (segment(0) == "muestras") ? 'class="active"' : '';?>><a href="<?php print path("muestras", TRUE);?>">Muestras</a></li>
+						<li <?php echo (segment(0) == "impresiones") ? 'class="active"' : '';?>><a href="<?php print path("impresiones", TRUE);?>">Impresiones</a></li>
 					</ul>
 				</div>
 			</div>

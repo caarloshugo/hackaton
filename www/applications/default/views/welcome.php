@@ -1,10 +1,22 @@
 <div class="page-header">
 	<h3>&iquest;Com&oacute; funciona?</h3>
-	<p>Seleccione uno de los valores de cada lista para mostrar la informaci&oacute;n y graficas correspondientes a ese estado y edad o si lo desea a nivel nacional y por todas las edades</p>
+	<p>Seleccione uno de los valores de cada lista para mostrar la informaci&oacute;n y graficas correspondientes al año en ese estado y edad o si lo desea a nivel nacional y por todas las edades</p>
 </div>
 
 <form class="form-horizontal" action="" method="post">
 	<fieldset>
+		<p>
+			<div class="control-group">
+			<label class="control-label" for="select01">A&ntilde;o: </label>
+				<div class="controls">
+					<select id="year" name="year">
+						<option value="1" <?php echo (POST("year")==1) ? 'selected="selected"': '';?>>2007</option>
+						<option value="2" <?php echo (POST("year")==2) ? 'selected="selected"': '';?>>2009</option>>
+					</select>
+				</div>
+			</div>
+		</p>
+		
 		<p>
 			<div class="control-group">
 			<label class="control-label" for="select01">Estado: </label>
