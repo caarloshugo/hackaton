@@ -40,7 +40,7 @@
 		<div class="container">
 			<div class="content">
 				<div class="page-header">
-					<h1>Hackatón <small>deserción escolar por estado</small></h1>
+					<h1>Hackatón <small>Visualización de datos de trabajo infantil y deserción escolar</small></h1>
 				</div>
 				
 				<div class="row">
