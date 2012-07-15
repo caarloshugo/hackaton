@@ -33,6 +33,7 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function works() {
+		$vars["data"] = $this->Default_Model->getReasonsWork();
 		$vars["view"] = $this->view("works", TRUE);
 		
 		$this->render("content", $vars);
