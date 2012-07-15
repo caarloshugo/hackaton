@@ -24,12 +24,12 @@
   <div id="flight-list" class="list"></div>
 </div>
 
-<script src="js/crossfilter.v1.min.js"></script>
-<script src="js/d3.v2.min.js"></script>
+<script src="<?php print get("webURL");?>/www/applications/default/views/js/crossfilter.v1.min.js"></script>
+<script src="<?php print get("webURL");?>/www/applications/default/views/js/d3.v2.min.js"></script>
 <script>
 
 // (It's CSV, but GitHub Pages only gzip's JSON at the moment.)
-d3.csv("mti2007CorregidaYReducida.csv", function(flights) {
+d3.csv("<?php print get("webURL");?>/www/applications/default/views/mti2007CorregidaYReducida.csv", function(flights) {
 
   // Various formatters.
   var formatNumber = d3.format(",d"),
