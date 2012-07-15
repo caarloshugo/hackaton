@@ -313,6 +313,40 @@ class Default_Model extends ZP_Model {
 		return $data;
 	}
 	
+	public function getReasonsWorkEdad($eda = "5") {
+		$this->table = "datasets2007";
+		$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
+		$query = $this->select . "c_ocu=1 and eda IN({$eda}) and mot_tra=";
+		
+		$reason7["1"] = $this->Db->query($query . "1");
+		$reason7["2"] = $this->Db->query($query . "2");
+		$reason7["3"] = $this->Db->query($query . "3");
+		$reason7["4"] = $this->Db->query($query . "4");
+		$reason7["5"] = $this->Db->query($query . "5");
+		$reason7["6"] = $this->Db->query($query . "6");
+		
+		$this->table = "datasets2009";
+		$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";
+		$query = $this->select . "c_ocu=1 and eda IN({$eda}) and mot_tra=";
+		
+		$reason9["1"] = $this->Db->query($query . "1");
+		$reason9["2"] = $this->Db->query($query . "2");
+		$reason9["3"] = $this->Db->query($query . "3");
+		$reason9["4"] = $this->Db->query($query . "4");
+		$reason9["5"] = $this->Db->query($query . "5");
+		$reason9["6"] = $this->Db->query($query . "6");
+		
+		foreach($reason7 as $key => $value) {
+			$data["2007"][$key] = (int) $value[0]["data"];
+		}
+		
+		foreach($reason9 as $key => $value) {
+			$data["2009"][$key] = (int) $value[0]["data"];
+		}
+		
+		return $data;
+	}
+	
 	public function getIncome() {
 		$this->table = "datasets2007";
 		$this->select = "SELECT sum(fac) as data FROM " . $this->table . " WHERE ";

@@ -33,9 +33,13 @@ class Default_Controller extends ZP_Controller {
 	}
 	
 	public function works() {
-		$vars["data"]  = $this->Default_Model->getReasonsWork();
-		$vars["incom"] = $this->Default_Model->getIncome();
-		$vars["view"]  = $this->view("works", TRUE);
+		$vars["data"]      = $this->Default_Model->getReasonsWork();
+		$vars["incom"]     = $this->Default_Model->getIncome();
+		$vars["edad5"]     = $this->Default_Model->getReasonsWorkEdad();
+		$vars["edad6_12"]  = $this->Default_Model->getReasonsWorkEdad("6,7,8,9,10,11,12");
+		$vars["edad13_15"] = $this->Default_Model->getReasonsWorkEdad("13,14,15");
+		$vars["edad16_17"] = $this->Default_Model->getReasonsWorkEdad("16,17");
+		$vars["view"]      = $this->view("works", TRUE);
 		
 		$this->render("content", $vars);
 	}
