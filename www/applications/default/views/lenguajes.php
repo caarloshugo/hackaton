@@ -1,5 +1,5 @@
 <div class="page-header">
-	<h3>Lenguajes que se hablan por estado - Pronim DGEI</h3>
+	<h3>Lenguas que se hablan por estado - Pronim DGEI</h3>
 	<p>Mapa de burbujas por estado y lengua que se hablan a nivel infantil, es otro apartado diferente a la desercion escolar</p>
 </div>
 
